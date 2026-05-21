@@ -359,7 +359,7 @@ object SubtitlesPreferencesScreen : Screen {
 
           // === ONLINE SUBTITLE SECTION ===
           item {
-            PreferenceSectionHeader(title = "Subtitle Search")
+            PreferenceSectionHeader(title = "字幕搜索")
           }
 
           item {
@@ -398,7 +398,7 @@ object SubtitlesPreferencesScreen : Screen {
 
               // Wyzie Sources
               MultiChoicePreference(
-                title = { Text("Subtitle Sources") },
+                title = { Text("字幕来源") },
                 summary = {
                   val summaryText = if (wyzieSources.isEmpty() || wyzieSources.contains("all")) {
                     "All"
@@ -447,7 +447,7 @@ object SubtitlesPreferencesScreen : Screen {
                   horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                   Text(
-                    text = "Advanced Search Filters",
+                    text = "高级搜索筛选",
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold
@@ -464,14 +464,14 @@ object SubtitlesPreferencesScreen : Screen {
                     SwitchPreference(
                       value = wyzieHearingImpaired,
                       onValueChange = { preferences.wyzieHearingImpaired.set(it) },
-                      title = { Text("Hearing-impaired friendly") },
-                      summary = { Text("Only show subtitles optimized for hearing impaired") }
+                      title = { Text("适合听障人士") },
+                      summary = { Text("仅显示为听障人士优化的字幕") }
                     )
 
                     PreferenceDivider()
 
                     MultiChoicePreference(
-                      title = { Text("Preferred Formats") },
+                      title = { Text("首选格式") },
                       summary = {
                         val summaryText = if (wyzieFormats.isEmpty() || wyzieFormats.contains("all")) {
                           "All"
@@ -489,7 +489,7 @@ object SubtitlesPreferencesScreen : Screen {
                     PreferenceDivider()
 
                     MultiChoicePreference(
-                      title = { Text("Preferred Encodings") },
+                      title = { Text("首选编码") },
                       summary = {
                         val summaryText = if (wyzieEncodings.isEmpty() || wyzieEncodings.contains("all")) {
                           "All"
@@ -565,7 +565,7 @@ object SubtitlesPreferencesScreen : Screen {
                 verticalAlignment = Alignment.CenterVertically
               ) {
                 Text(
-                  text = "Subtitle Search provided by",
+                  text = "字幕搜索提供方",
                   style = MaterialTheme.typography.bodySmall,
                   color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
